@@ -4,16 +4,16 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import formates.homePage;
+import formates.HomePage;
 
 @RunWith(Parameterized.class)
-public class qaTest {
+public class QaTest {
     @Rule
-    public driverSettings driverFactory = new driverSettings();
+    public DriverSettings driverFactory = new DriverSettings();
     private final int questionNumber;
     private final int answerNumber;
     private final String answerText;
-    public qaTest(int questionNumber, int answerNumber, String answerText) {
+    public QaTest(int questionNumber, int answerNumber, String answerText) {
         this.questionNumber = questionNumber;
         this.answerNumber = answerNumber;
         this.answerText = answerText;
@@ -35,7 +35,7 @@ public class qaTest {
 
     @Test
     public void ListTest() {
-        homePage objHomePage = new homePage(driverFactory.getDriver());
+        HomePage objHomePage = new HomePage(driverFactory.getDriver());
 
         objHomePage.clickList(questionNumber);
         String actualAnswer = objHomePage.listAnswer(answerNumber);

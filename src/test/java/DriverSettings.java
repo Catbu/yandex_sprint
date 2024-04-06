@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class driverSettings extends ExternalResource {
+public class DriverSettings extends ExternalResource {
     private WebDriver driver;
 
     @Override
