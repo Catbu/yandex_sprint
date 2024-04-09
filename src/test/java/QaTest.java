@@ -34,7 +34,7 @@ public class QaTest {
     }
 
     @Test
-    public void ListTest() {
+    public void listTest() {
         HomePage objHomePage = new HomePage(driverFactory.getDriver());
 
         objHomePage.clickList(questionNumber);

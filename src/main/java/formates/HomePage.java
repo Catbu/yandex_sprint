@@ -22,6 +22,8 @@ public class HomePage {
     //Кнопка Внизу
     private By orderBottomButton = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
 
+    private By cookieButton = By.xpath(".//button[@id='rcc-confirm-button']");
+
 
     public void clickOrderTopButton() {
         driver.findElement(orderTopButton).click();
@@ -30,6 +32,8 @@ public class HomePage {
     public void clickOrderBottomButton() {
         driver.findElement(orderBottomButton).click();
     }
+
+    public void clickCookieButton() {driver.findElement(cookieButton).click();}
 
     public void clickList(int questionNumber) {
         WebElement element = driver.findElement(By.xpath(".//div[@id='accordion__heading-" + questionNumber + "']"));
